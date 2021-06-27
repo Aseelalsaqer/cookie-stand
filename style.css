@@ -1,0 +1,10 @@
+body{
+    background-color: #333;
+    color: #eee;    
+}
+
+a, a:visited, a:hover{
+    color: cadetblue;    
+    text-decoration: underline;
+    font-size: x-large;
+}
