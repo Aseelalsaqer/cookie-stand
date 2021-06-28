@@ -33,12 +33,10 @@ class shop {
         let result = [];
         for (const hour in this.workhour) {
             var cookies = this.getRandom();
-            this.cookiesPerHour.push(cookies);
             this.total += cookies;
             result.push(this.workhour[hour] + ': ' + cookies + ' cookies.');
         }
         result.push('Total: ' + this.total + ' cookies.')
-        this.cookiesPerHour.push( this.total);
         return result;
     }
   
@@ -59,12 +57,14 @@ class shop {
         var html = "<tr><td class='tableElement'>" + this.shopName + "</td>";
         for (const hour in this.workhour) {
             var cookies = this.getRandom();
+            this.cookiesPerHour.push(cookies);
             this.total += cookies;
             html+="\n<td class='tableElement'>" + cookies + "</td>";
         }
         html+="\n<td class='tableElement'>" + this.total + "</td>";
         html += "\n</tr>";
 
+        this.cookiesPerHour.push( this.total);
         return html;
     }
   }
@@ -120,6 +120,12 @@ for (let i = 0; i < 15; i++) {
                         + Paris.cookiesPerHour[i]
                         + Lima.cookiesPerHour[i];
 
+                        console.log("["+i +"]" + seattle.cookiesPerHour[i]);
+                        console.log("["+i +"]" + Tokyo.cookiesPerHour[i]);
+                        console.log("["+i +"]" + Dubai.cookiesPerHour[i]);
+                        console.log("["+i +"]" + Paris.cookiesPerHour[i]);
+                        console.log("["+i +"]" + Lima.cookiesPerHour[i]);
+    console.log(totalPerHour)
     totalCookiesPerHour.push(totalPerHour);
 }
 
