@@ -1,0 +1,39 @@
+
+body{
+    background-color: #333;
+    color: #eee;    
+}
+
+a, a:visited, a:hover{
+    color:lightcoral ;    
+    text-decoration: none;
+    font-size: x-large;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    width:  100px;
+}
+
+.tableElement{
+    border: 2px solid #aaaa;
+}
+/* ul li {
+    display: inline;
+    margin: 50px;
+    
+}
+footer {
+    text-align: left;
+    clear: both;
+}
+div img {
+    margin: 30px;
+    width:20%;
+    display: inline-table;
+    
+} */
+
