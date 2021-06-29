@@ -8,3 +8,15 @@ a, a:visited, a:hover{
     text-decoration: underline;
     font-size: x-large;
 }
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    width:  100px;
+}
+
+.tableElement{
+    border: 2px solid #aaaa;
+}
