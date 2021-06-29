@@ -57,11 +57,11 @@ let timeSlots = [
         let liElem = document.createElement('li');
   
         
-  
-        liElem.textContent = timeSlots[i] + ': ' + this.calcCookiesEachHour() + ' cookies';
+        var cookie =  this.calcCookiesEachHour();
+        liElem.textContent = timeSlots[i] + ': ' + cookie + ' cookies';
   
         ulElem.appendChild(liElem);
-        this.total += this.calcCookiesEachHour[i];
+        this.total += cookie;
       }
   
       let totalItem=document.createElement('li');
