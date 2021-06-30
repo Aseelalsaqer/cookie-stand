@@ -21,7 +21,7 @@ td{
 .tableElement{
     border: 2px solid #aaaa;
 }
-/* ul li {
+ul li {
     display: inline;
     margin: 50px;
     
@@ -35,5 +35,5 @@ div img {
     width:20%;
     display: inline-table;
     
-} */
+}
 
