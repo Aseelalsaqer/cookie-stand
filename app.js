@@ -61,13 +61,13 @@ function shop(shopName, min, max, avg) {
   
       let ulElem = document.getElementById(this.id);
   
-      for (let i = 0; i < timeSlots.length; i++) {
+      for (let i = 0; i < header.length; i++) {
   
         let liElem = document.createElement('li');
   
         
         var cookie =  this.calcCookiesEachHour();
-        liElem.textContent = timeSlots[i] + ': ' + cookie + ' cookies';
+        liElem.textContent = header[i] + ': ' + cookie + ' cookies';
   
         ulElem.appendChild(liElem);
         this.total += cookie;
@@ -141,11 +141,6 @@ var Dubai = new shop('Dubai', 23, 65, 6.5);
 var Paris = new shop('Paris', 23, 65, 6.5);
 var Lima = new shop('Lima', 23, 65, 6.5);
 
-//   document.body.appendChild(seattle.getHtml());
-//   document.body.appendChild(Tokyo.getHtml());
-//   document.body.appendChild(Dubai.getHtml());
-//   document.body.appendChild(Paris.getHtml());
-//   document.body.appendChild(Lima.getHtml());
 
 var table = document.createElement('table');
 var header = [
