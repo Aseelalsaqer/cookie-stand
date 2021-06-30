@@ -1,12 +1,10 @@
-
-
 function shop(shopName, min, max, avg) {
     this.min = min;
     this.max = max;
     this.avgCookiePerCustomer = avg;
     this.shopName = shopName;
     this.total = 0;
-   // this.list = this.generateList();
+   
 
    this.workhour = [
     '6am',
@@ -23,67 +21,8 @@ function shop(shopName, min, max, avg) {
     '5pm',
     '6pm',
     '7pm',
-  ];
-  
-  
-  function randomInRange(min, max) {
-  
-    let range = max - min;
-  
-    return Math.floor(Math.random() * (range + 1)) + min;
-  }
-  
-  
-  let seattle = {
-    id: 'seattle',
-    location: 'Seattle',
-    minCustomersPerHour: 23,
-    maxCustomersPerHour: 65,
-    avgCookiesPerSale: 6.3,
-    total:0,
-    cookieSales: [],
-    generateCustomersPerHour: function () {
-      let customersPerHour = randomInRange(this.minCustomersPerHour, this.maxCustomersPerHour);
-      return customersPerHour;
-    },
-    calcCookiesEachHour: function () {
-      let customersPerHour = this.generateCustomersPerHour();
-      let cookiesEachHour = customersPerHour * this.avgCookiesPerSale;
-      
-      return Math.ceil(cookiesEachHour);
-    },
-    simulateCookieSales: function() {
-      
-    },
-    render: function () {
-  
-      this.simulateCookieSales();
-  
-      let ulElem = document.getElementById(this.id);
-  
-      for (let i = 0; i < timeSlots.length; i++) {
-  
-        let liElem = document.createElement('li');
-  
-        
-        var cookie =  this.calcCookiesEachHour();
-        liElem.textContent = timeSlots[i] + ': ' + cookie + ' cookies';
-  
-        ulElem.appendChild(liElem);
-        this.total += cookie;
-      }
-  
-      let totalItem=document.createElement('li');
-      ulElem.appendChild(totalItem);
-      totalItem.textContent = `Total: ${this.total} cookies `;
-  
-    },
-  };
-  
-  
-  
- 
-  seattle.render();
+];
+
 
 
 
@@ -141,11 +80,7 @@ var Dubai = new shop('Dubai', 23, 65, 6.5);
 var Paris = new shop('Paris', 23, 65, 6.5);
 var Lima = new shop('Lima', 23, 65, 6.5);
 
-//   document.body.appendChild(seattle.getHtml());
-//   document.body.appendChild(Tokyo.getHtml());
-//   document.body.appendChild(Dubai.getHtml());
-//   document.body.appendChild(Paris.getHtml());
-//   document.body.appendChild(Lima.getHtml());
+
 
 var table = document.createElement('table');
 var header = [
