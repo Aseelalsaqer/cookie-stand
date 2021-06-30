@@ -1,5 +1,3 @@
-
-
 function shop(shopName, min, max, avg) {
     this.min = min;
     this.max = max;
