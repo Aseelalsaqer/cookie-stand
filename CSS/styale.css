@@ -34,5 +34,7 @@ div img {
     width:20%;
     display: inline-table;
     
-} 
-
+}
+a {
+    text-decoration: none;
+}
